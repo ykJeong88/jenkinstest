@@ -33,6 +33,7 @@ public class TestJob {
     @Bean
     public Tasklet testTasklet(){
         return ((contribution, chunkContext) -> {
+            Thread.sleep(50000);
             System.out.println("테스트1");
 
             return RepeatStatus.FINISHED;
